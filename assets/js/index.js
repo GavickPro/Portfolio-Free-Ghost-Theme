@@ -97,5 +97,16 @@
             main_menu.addClass("menu--open");
           }
         });
+        
+        
+        // three scenarios of active links - absolute, relative, relative w.o slash
+        var url = window.location.href;
+        var url_relative = window.location.pathname;
+        var url_relative_noslash = url_relative.slice(0,-1);
+        
+        $('a.menu__item[href="' + url + '"]').addClass('menu__item--active');
+        $('a.menu__item[href="' + url_relative + '"]').addClass('menu__item--active');
+        $('a.menu__item[href="' + url_relative_noslash + '"]').addClass('menu__item--active');
+
     });
 }(jQuery));

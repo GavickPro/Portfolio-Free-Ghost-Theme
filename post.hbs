@@ -16,7 +16,7 @@
             <div class="post__wrapper--subpage">    
                 {{#if image}}
                 	<div class="post__media">
-                		<img src="{{image}}" alt="{{{title}}}" />
+                		<img src="{{img_url feature_mage}}" alt="{{{title}}}" />
                 	</div>
                 {{/if}}
 
@@ -64,7 +64,7 @@
             <aside class="author">
                 {{#if author.image}}
                 <a href="{{author.website}}" class="author__avatar">
-                    <img src="{{author.image}}" alt="{{author.name}}">
+                    <img src="{{author.profile_image}}" alt="{{author.name}}">
                 </a>
                 {{/if}}
 
@@ -102,7 +102,7 @@
   {{> config}}
 
   {{#post}}
-    var disqus_identifier = '{{id}}';
+    var disqus_identifier = '{{comment_id}}';
   {{/post}}
 
   if(typeof DISQUS !== 'object') {

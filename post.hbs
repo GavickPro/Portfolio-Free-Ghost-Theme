@@ -14,9 +14,9 @@
             {{/contentFor}}
 
             <div class="post__wrapper--subpage">    
-                {{#if image}}
+                {{#if feature_image}}
                 	<div class="post__media">
-                		<img src="{{img_url feature_mage}}" alt="{{{title}}}" />
+                		<img src="{{img_url feature_image}}" alt="{{{title}}}" />
                 	</div>
                 {{/if}}
 
@@ -62,7 +62,7 @@
             </div>
 
             <aside class="author">
-                {{#if author.image}}
+                {{#if author.profile_image}}
                 <a href="{{author.website}}" class="author__avatar">
                     <img src="{{author.profile_image}}" alt="{{author.name}}">
                 </a>

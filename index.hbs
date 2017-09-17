@@ -1,7 +1,7 @@
 {{!< default}}
 
 {{! The main content area on the homepage }}
-<main role="main" class="{{#if @blog.cover}} custom-bg{{else}} default-bg{{/if}}"{{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>
+<main role="main" class="{{#if @blog.cover_image}} custom-bg{{else}} default-bg{{/if}}"{{#if @blog.cover_image}} style="background-image: url({{@blog.cover_image}})"{{/if}}>
     <div class="main__wrapper">
     {{#if @blog.navigation}}
     	{{navigation}}
@@ -11,8 +11,8 @@
         {{#foreach posts}}
         <article class="{{post_class}} post__wrapper" data-cols="4">
             <div class="post__wrapper_helper post__wrapper_helper--notloaded el__transition">
-               {{#if image}}
-               		<img src="{{image}}" alt="{{{title}}}" class="post__image_to_load" />
+               {{#if feature_image}}
+               		<img src="{{img_url feature_image}}" alt="{{{title}}}" class="post__image_to_load" />
                {{/if}}
 
                 <div class="post__preview el__transition">    
